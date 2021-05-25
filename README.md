@@ -13,6 +13,22 @@ Because these sketches are designed to be transmitted to the Arduino without adj
 
 ## Contents
 
+### KeyboardMouse-1p
+Keyboard and/or mouse, mapped to a CD-i Relative Coordinate Device.
+
+Mouse mapping:
+* Mouse move: Move cursor
+* Left button: Button 1.
+* Right button: Button 2.
+* Middle button: Button 1 and 2
+
+Keyboard mapping:
+* Cursor keys: Directional input
+* Z: Button 1
+* X: Button 2
+* C: Button 1 and 2
+* 0-9: Speed selection (Keyboard order, 1 is slowest, 0 is fastest)
+
 ### MagicNS-1p
 Switch Pro, Switch SNES controller using a MagicNS dongle, mapped to a CD-i Maneuvering Device.
 

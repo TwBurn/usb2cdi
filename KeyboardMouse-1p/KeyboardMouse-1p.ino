@@ -6,13 +6,12 @@
 #include <usbhub.h>
 #include <CdiController.h>
 #include <SPI.h>
-#include "NS2CDi.h"
+#include "KeyMouse2CDi.h"
 
 USB Usb;
 USBHub UsbHub(&Usb);
 
-NS2CDi cdiPlayer0(&Usb, 2, 3, 0); //Controller 1 -> RTS = 2, RXD = 3 
-NS2CDi cdiPlayer1(&Usb, 2, 7, 1); //Controller 2 -> RTS = 6, RXD = 7
+KeyMouse2CDi cdiPlayer(&Usb, 2, 3, 0); //Controller 1 -> RTS = 2, RXD = 3
 
 void setup() {
 	//Set pin 4 and 5 to support the level converter
@@ -23,12 +22,10 @@ void setup() {
 
 	Usb.Init();
 	
-	cdiPlayer0.Init();
-	cdiPlayer1.Init();
+	cdiPlayer.Init();
 }
 
 void loop() { 
 	Usb.Task();
-	cdiPlayer0.Task();
-	cdiPlayer1.Task();
+	cdiPlayer.Task();
 }
